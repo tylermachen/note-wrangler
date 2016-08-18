@@ -19,6 +19,11 @@ angular.module('NoteWrangler').config(['$routeProvider', function($routeProvider
       controller: 'NotesCreateController'
     })
 
+    .when('/notes/:id', {
+      templateUrl: 'assets/templates/notes/show.html',
+      controller: 'NotesShowController'
+    })
+
     .when('/users', {
       templateUrl: 'assets/templates/users/index.html',
       controller: 'UsersIndexController'
@@ -27,10 +32,6 @@ angular.module('NoteWrangler').config(['$routeProvider', function($routeProvider
     .when('/users/:id', {
       templateUrl: 'assets/templates/users/show.html',
       controller: 'UsersShowController'
-    })
-
-    .when('', {
-
     })
 
     .otherwise({
